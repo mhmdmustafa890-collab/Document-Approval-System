@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <strong>
+        DA 
+    </strong>
+
+    <span id="userEmail"></span>
+
+    <button
+        class="ghost"
+        onclick="logout()"
+    >
+        Logout
+    </button>
+
+</header>
+
+
+<main>
+
+    <h1>
+        Admin Dashboard
+    </h1>
+
+    <p>
+        Monitor all documents and approval activity.
+    </p>
+
+
+    <section class="card">
+
+        <h2>
+            All Documents
+        </h2>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Document
+                    </th>
+
+                    <th>
+                        Owner
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Reviewer
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="adminDocs">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+<footer class="footer">
+    <p>Designed & Developed by <strong>Mohamed Mustafa</strong></p>
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

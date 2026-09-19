@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Employee Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <strong>DA</strong>
+
+    <span id="userEmail"></span>
+
+    <button
+        class="ghost"
+        type="button"
+        onclick="logout()"
+    >
+        Logout
+    </button>
+
+</header>
+
+
+<main>
+
+    <h1>Employee Dashboard</h1>
+
+    <p>
+        Upload documents and track approval status.
+    </p>
+
+
+    <!-- =========================
+         UPLOAD + SUMMARY
+    ========================== -->
+
+    <section class="grid">
+
+
+        <!-- Upload -->
+
+        <div class="card">
+
+            <h2>Upload Document</h2>
+
+            <form id="uploadForm">
+
+                <label for="title">
+                    Document Title
+                </label>
+
+                <input
+                    id="title"
+                    name="title"
+                    type="text"
+                    placeholder="Leave Request"
+                    required
+                >
+
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Document description"
+                ></textarea>
+
+
+                <label for="file">
+                    Document File
+                </label>
+
+                <input
+                    id="file"
+                    name="file"
+                    type="file"
+                    accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+                    required
+                >
+
+
+                <button type="submit">
+                    Upload Document
+                </button>
+
+
+                <p id="msg"></p>
+
+            </form>
+
+        </div>
+
+
+        <!-- Summary -->
+
+        <div class="card">
+
+            <h2>Summary</h2>
+
+            <div class="stats">
+
+                <div>
+                    <b id="total">0</b>
+                    <small>Total</small>
+                </div>
+
+                <div>
+                    <b id="pending">0</b>
+                    <small>Pending</small>
+                </div>
+
+                <div>
+                    <b id="approved">0</b>
+                    <small>Approved</small>
+                </div>
+
+                <div>
+                    <b id="rejected">0</b>
+                    <small>Rejected</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MY DOCUMENTS
+    ========================== -->
+
+    <section class="card">
+
+        <h2>My Documents</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Document
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Reviewer
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="docs">
+
+                <tr>
+
+                    <td colspan="4">
+                        Loading documents...
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <p>
+        Designed &amp; Developed by
+        <strong>Mohamed Mustafa</strong>
+    </p>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

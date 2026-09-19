@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Document Approval System</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="auth">
+
+    <div class="auth-card">
+
+        <!-- Brand -->
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                DA
+            </div>
+
+            <div>
+                <h1>Document Approval</h1>
+            </div>
+
+        </div>
+
+
+        <!-- Login Form -->
+
+        <form id="loginForm">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                autocomplete="username"
+                required
+            >
+
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+            >
+
+
+            <label for="role">
+                Role
+            </label>
+
+            <select
+                id="role"
+                name="role"
+                required
+            >
+
+                <option value="employee">
+                    Employee
+                </option>
+
+                <option value="manager">
+                    Manager
+                </option>
+
+                <option value="admin">
+                    Admin
+                </option>
+
+            </select>
+
+
+            <button type="submit">
+                Sign In
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <p>
+            Designed &amp; Developed by
+            <strong>Mohamed Mustafa</strong>
+        </p>
+
+    </footer>
+
+
+    <!-- Cognito Library -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.3.12/dist/amazon-cognito-identity.min.js">
+    </script>
+
+
+    <!-- Login JavaScript -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+

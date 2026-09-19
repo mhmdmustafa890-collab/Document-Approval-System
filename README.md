@@ -40,6 +40,13 @@ The complete application is delivered through **Amazon CloudFront**, with the fr
 
 ![Admin Dashboard](https://github.com/user-attachments/assets/4df39cac-f497-4bcd-8cf5-96403801e34b)
 
+### Email Notification
+
+After a manager approves or rejects a document, the system sends an email notification to the employee with the updated document status.
+
+![Email Notification](https://github.com/user-attachments/assets/a3c3efeb-983f-4846-9776-c85cc858668e)
+
+
 ---
 
 # 2. AWS Architecture

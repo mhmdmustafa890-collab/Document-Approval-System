@@ -12,45 +12,33 @@ The **Document Approval System** provides a complete workflow for managing docum
 
 The system contains three main roles:
 
-* **Admin**
-* **Manager**
-* **Employee**
+- **Admin**
+- **Manager**
+- **Employee**
 
 Each role has different permissions and responsibilities.
 
-### Main Workflow
+The complete application is delivered through **Amazon CloudFront**, with the frontend hosted on **Amazon S3**.
 
-```text
-Employee
-   │
-   │ Upload Document
-   ▼
-API Gateway
-   │
-   ▼
-Employee Lambda
-   │
-   ├──────────────► Amazon S3
-   │                  │
-   │                  └── Document File
-   │
-   └──────────────► DynamoDB
-                      │
-                      └── Document Metadata
-                               │
-                               ▼
-                            Manager
-                               │
-                     Approve / Reject
-                               │
-                               ▼
-                         DynamoDB
-                               │
-                               ▼
-                            Employee
-```
+## Application Preview
 
-The complete application is delivered through **Amazon CloudFront** with the frontend hosted on **Amazon S3**.
+### Home / Login Page
+
+![Home Page](https://github.com/user-attachments/assets/6024755b-0d72-4d60-8996-cca998dfb237)
+
+### Employee Dashboard
+
+![Employee Dashboard](https://github.com/user-attachments/assets/0c80bd76-0b4d-4c18-a347-c7043266bfcd)
+
+### Manager Dashboard
+
+![Manager Dashboard](https://github.com/user-attachments/assets/0955cad0-990d-452d-b77a-a97ab83d288c)
+
+
+
+### Admin Dashboard
+
+![Admin Dashboard](https://github.com/user-attachments/assets/4df39cac-f497-4bcd-8cf5-96403801e34b)
 
 ---
 
@@ -67,6 +55,7 @@ The project uses the following AWS services:
 * **IAM** – Controls permissions between AWS services.
 
 ### Architecture
+![Architecture](https://github.com/user-attachments/assets/045e1085-8345-4e35-9126-829d3dd82ed1)
 
 ---
 
@@ -93,8 +82,7 @@ script.js
 The S3 bucket is connected to Amazon CloudFront to deliver the website.
 
 ### Screenshot
-
-Add your S3 bucket screenshot here.
+![s3](https://github.com/user-attachments/assets/57dc2f3c-6817-4c9e-94de-e9e53483eaa9)
 
 ---
 
@@ -121,7 +109,7 @@ Frontend Application
 
 ### Screenshot
 
-Add your CloudFront distribution screenshot here.
+![Cloud front](https://github.com/user-attachments/assets/3b7cba54-4660-4527-af25-d5c7106df75e)
 
 ---
 
@@ -168,8 +156,13 @@ The JWT token is sent with API requests to identify the authenticated user.
 | Employee | Upload and track documents           |
 
 ### Screenshot
+![Screenshot](https://github.com/user-attachments/assets/fd6d5140-c4ed-4a69-96e0-58c2f04f4f07)
+
+
 
 ### Groups Screenshot
+
+![Groups Screenshot](https://github.com/user-attachments/assets/b95d3261-90e1-41a9-b923-63f8b8dd5436)
 
 
 ---
@@ -198,6 +191,9 @@ API Gateway
 The API uses the Cognito authentication token to secure the requests.
 
 ### Screenshot
+
+![Screenshot](https://github.com/user-attachments/assets/8144d696-cdf9-4cc5-85f4-ea5c34ad5c8a)
+![Screenshot](https://github.com/user-attachments/assets/2a62fbf8-6a39-4e7a-9f0e-dea0f2779450)
 
 
 ---
@@ -242,6 +238,9 @@ Employee Lambda
 
 ### Screenshot
 
+![Screenshot](https://github.com/user-attachments/assets/c333abfa-4e6e-4469-9b43-b337b9ab4522)
+
+
 ---
 
 # 8. Get Lambda
@@ -277,10 +276,7 @@ Document Information
 ```
 
 ### Screenshot
-
-```text
-[ Get Lambda Screenshot ]
-```
+![Screenshot](https://github.com/user-attachments/assets/e27545a9-c095-40cb-a899-d7f2b60539fc)
 
 ---
 
@@ -310,9 +306,8 @@ Admin Lambda
 
 ### Screenshot
 
-```text
-[ Admin Lambda Screenshot ]
-```
+![Screenshot](https://github.com/user-attachments/assets/2cdc3753-8e7d-435c-a817-256b76f41171)
+
 
 ---
 
@@ -348,10 +343,7 @@ Pending
 ```
 
 ### Screenshot
-
-```text
-[ DynamoDB Table Screenshot ]
-```
+![Screenshot](https://github.com/user-attachments/assets/2b07a66d-e15b-41c7-a947-bd709572f510)
 
 ---
 
@@ -373,7 +365,11 @@ S3
       └── document-003.pdf
 ```
 
+![Screenshot](https://github.com/user-attachments/assets/1c9b0a06-943e-438f-a26c-ca66de8d12dd)
+
+
 DynamoDB stores the information required to locate each file.
+
 
 ---
 
@@ -647,31 +643,16 @@ Document-Approval-System/
 # 19. Final Result
 
 The final system provides a complete serverless document approval workflow using AWS.
+![Screenshot](https://github.com/user-attachments/assets/dbf76868-7708-4136-a396-ffa5deb22857)
 
-```text
-Employee
-   │
-   │ Upload
-   ▼
-S3 + DynamoDB
-   │
-   │ Pending
-   ▼
-Manager
-   │
-   ├── Approve
-   │
-   └── Reject
-   │
-   ▼
-DynamoDB
-   │
-   ▼
-Employee
-   │
-   ▼
-View Final Status
-```
+![Screenshot](https://github.com/user-attachments/assets/518d3bd5-5bd1-4493-ab6a-ec9b482a8a74)
+
+
+![Screenshot](https://github.com/user-attachments/assets/420bbe28-3c44-43b9-ae68-57054aeec064)
+
+
+![Screenshot](https://github.com/user-attachments/assets/3e67901b-3908-4f0a-a7c3-a40944b0120d)
+
 
 The project demonstrates the use of:
 
